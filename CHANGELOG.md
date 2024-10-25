@@ -1,3 +1,10 @@
+## [1.0.31](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.30...v1.0.31) (2024-10-25)
+
+
+### Bug Fixes
+
+* remove log ([0c0078c](https://github.com/scrumsdotcom/semantic-release-config/commit/0c0078cb52ba2b6d0397196dfd3d51f81abd8c30))
+
 ## [1.0.30](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.29...v1.0.30) (2024-10-25)
 
 
