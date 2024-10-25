@@ -10,7 +10,9 @@ jobs:
   release:
     name: Publish to npm
     runs-on: ubuntu-latest
+
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -28,3 +30,12 @@ jobs:
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Merge main into develop
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git checkout develop
+          git pull origin develop
+          git merge origin/main --no-edit
+          git push origin develop
