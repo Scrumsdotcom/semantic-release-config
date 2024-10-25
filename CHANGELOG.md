@@ -1,3 +1,10 @@
+## [1.0.45](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.44...v1.0.45) (2024-10-25)
+
+
+### Bug Fixes
+
+* skip CI ([5493b2c](https://github.com/scrumsdotcom/semantic-release-config/commit/5493b2c275c10f911ced508731335c8190ab813c))
+
 ## [1.0.44](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.43...v1.0.44) (2024-10-25)
 
 
