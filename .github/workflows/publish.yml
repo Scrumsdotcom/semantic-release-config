@@ -1,7 +1,7 @@
 name: Node.js Package Publish
 
 on:
-  workflow_trigger: # This is a custom event
+  workflow_dispatch: # This is a custom event
   # push:
   #   branches:
   #     - master
