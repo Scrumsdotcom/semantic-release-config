@@ -1,3 +1,10 @@
+## [1.0.39](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.38...v1.0.39) (2024-10-25)
+
+
+### Bug Fixes
+
+* **name:** include package name ([78053e5](https://github.com/scrumsdotcom/semantic-release-config/commit/78053e5434737b206ef50f483f3e828391c4f27f))
+
 ## [1.0.38](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.37...v1.0.38) (2024-10-25)
 
 
