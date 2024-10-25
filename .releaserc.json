@@ -9,16 +9,6 @@
 				"npmPublish": false
 			}
 		],
-		"@semantic-release/git",
-		[
-			"@intuit/semantic-release-slack",
-			{
-				"platforms": [
-					"brew",
-					"npm",
-					"docker"
-				]
-			}
-		]
+		"@semantic-release/git"
 	]
 }
