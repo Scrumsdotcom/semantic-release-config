@@ -11,8 +11,8 @@ const packageJson = require(path.join(__dirname, 'package.json'));
 const RELEASE_URL = `https://github.com/scrumsdotcom/semantic-release-config/releases/tag/v${packageJson.version}`;
 const APP_URL = 'https://www.scrums.com'; // Custom App URL
 
-// Get the message type (success or failure) from environment variables or default to success
-const TYPE = process.env.TYPE || 'success';
+// Get the message type (success or failure) from command-line arguments
+const TYPE = process.argv[2]; // Pass 'success' or 'failure' as a command-line argument
 
 /**
  * Function to build the Slack message content based on success or failure.
