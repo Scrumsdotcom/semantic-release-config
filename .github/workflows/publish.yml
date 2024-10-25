@@ -34,9 +34,15 @@ jobs:
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
+
           git fetch
+
           git checkout develop
+
           git pull origin develop
-          git merge origin/main --no-edit
+
+          git merge origin/main --allow-unrelated-histories --no-edit
+
           git commit --amend -m "Merge main into develop [ci skip]"
+
           git push origin develop
