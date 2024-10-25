@@ -1,16 +1,16 @@
 name: Node.js Package Publish
 
 on:
-  workflow_dispatch: # This is a custom event
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ['release']
+    types:
+      - completed
 
 jobs:
   release:
     name: Publish to npm
     runs-on: ubuntu-latest
-
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
