@@ -14,7 +14,7 @@
 
 > Scrums.com's shareable [**semantic-release**](https://github.com/semantic-release/semantic-release) configuration
 
-## Plugins
+# Plugins
 
 This [shareable configuration](https://github.com/sovtech/semantic-release-config/blob/master/.releaserc.json) uses the following plugins:
 
