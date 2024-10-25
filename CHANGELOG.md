@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.2...v1.0.3) (2024-10-25)
+
+
+### Bug Fixes
+
+* **release:** reorder ([743254c](https://github.com/scrumsdotcom/semantic-release-config/commit/743254c2509d258593de40e608e32865c0c25114))
+
 ## [1.0.2](https://github.com/sovtech/semantic-release-config/compare/v1.0.1...v1.0.2) (2024-10-24)
 
 
