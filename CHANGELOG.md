@@ -1,3 +1,10 @@
+## [1.0.40](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.39...v1.0.40) (2024-10-25)
+
+
+### Bug Fixes
+
+* **name:** add zulu ([48ce046](https://github.com/scrumsdotcom/semantic-release-config/commit/48ce046c432e23d75ceb737d3f7e307b2e7d6d4d))
+
 ## [1.0.39](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.38...v1.0.39) (2024-10-25)
 
 
