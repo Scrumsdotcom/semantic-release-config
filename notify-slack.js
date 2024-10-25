@@ -8,8 +8,10 @@ const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
 const packageJson = require(path.join(__dirname, 'package.json'));
 
 // Build necessary URLs
-const RELEASE_URL = `https://github.com/scrumsdotcom/semantic-release-config/releases/tag/v${packageJson.version}`;
-const APP_URL = 'https://www.scrums.com'; // Custom App URL
+const RELEASE_URL = `${process.env.GH_REPO_URL}/releases/tag/v${packageJson.version}`;
+
+// Custom App URL to redirect to the app
+const APP_URL = process.env.APP_URL;
 
 // Get the message type (success or failure) from command-line arguments
 const TYPE = process.argv[2]; // Pass 'success' or 'failure' as a command-line argument
@@ -35,9 +37,9 @@ const formatMessage = (version, messageType) => {
 const sendSlackVariables = async (appUrl, text, releaseUrl) => {
   // Construct the payload
   const payload = {
-    'app-url': appUrl, // App URL
-    text: text, // Message content
-    'release-url': releaseUrl, // Release URL
+    'app-url': appUrl,
+    text,
+    'release-url': releaseUrl,
   };
 
   try {
