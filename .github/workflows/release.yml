@@ -30,14 +30,10 @@ jobs:
       - name: Slack notification on success
         if: success()
         run: npm run notify-slack ${{ env.VERSION }} success
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
       - name: Slack notification on failure
         if: failure()
         run: npm run notify-slack ${{ env.VERSION }} failure
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
 env:
   SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
