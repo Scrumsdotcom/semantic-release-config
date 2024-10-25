@@ -31,21 +31,3 @@ jobs:
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      # 2. Sync DEVELOP branch: Cherry-pick the relevant changes (version bump and changelog) from main to develop
-      - name: Checkout develop branch
-        run: |
-          # Reconfigure git identity
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-
-          # Fetch develop and checkout
-          git fetch
-          git checkout develop
-          git pull origin develop
-
-          # Cherry-pick the latest commit that bumped version on main
-          git cherry-pick -m 1 origin/main
-
-          # Push the change to develop
-          git push origin develop
