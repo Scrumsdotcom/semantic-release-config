@@ -48,7 +48,8 @@
     "semantic-release": ">=15.13.31"
   },
   "resolutions": {
-    "micromatch": "^4.0.8"
+    "micromatch": "^4.0.8",
+    "debug": "^4.3.1"
   },
   "scripts": {
     "release": "semantic-release",
