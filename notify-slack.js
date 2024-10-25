@@ -11,7 +11,6 @@ const type = process.argv[2] || 'success';
 // Your Slack Incoming Webhook URL (passed as an environment variable)
 const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
 
-// Function to send slack notification
 const sendSlackNotification = async (version, messageType) => {
   const payload = {
     success: {
