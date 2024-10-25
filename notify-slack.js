@@ -1,13 +1,15 @@
 const axios = require('axios');
 const path = require('path');
 
+const packageJson = require(path.join(__dirname, 'package.json'));
+
 const config = {
   // Get the Slack Webhook URL from environment variables.
   SLACK_WEBHOOK_URL: process.env.SLACK_WEBHOOK_URL,
   // Get the GitHub repository URL from environment variables.
   GH_REPO_URL: process.env.GH_REPO_URL,
   // Load package.json to extract version and package name
-  PACKAGE_JSON: require(path.join(__dirname, 'package.json')),
+  PACKAGE_JSON: packageJson,
   // Custom App URL to redirect to the app
   APP_URL: process.env.APP_URL,
   // Build necessary URLs
