@@ -1,3 +1,10 @@
+## [1.0.35](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.34...v1.0.35) (2024-10-25)
+
+
+### Bug Fixes
+
+* **script:** reword it ([16c0b8f](https://github.com/scrumsdotcom/semantic-release-config/commit/16c0b8fc9924be0f0700d7028beaecaf48f8cbc2))
+
 ## [1.0.34](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.33...v1.0.34) (2024-10-25)
 
 
