@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.12...v1.0.13) (2024-10-25)
+
+
+### Bug Fixes
+
+* **version:** double var ([449f461](https://github.com/scrumsdotcom/semantic-release-config/commit/449f461bf7a1451a588f499a70e643045dd97d8a))
+
 ## [1.0.12](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.11...v1.0.12) (2024-10-25)
 
 
