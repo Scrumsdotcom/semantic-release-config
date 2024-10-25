@@ -33,10 +33,10 @@ const formatMessage = (version, releaseUrl, packageName, messageType) => {
 };
 
 // Sends the message as the payload via the webhook
-const sendSlackVariables = async (formattedMessage) => {
+const sendSlackVariables = async (formattedMessage, releaseUrl) => {
   const payload = {
     text: formattedMessage, // Slack message content expected by the webhook workflow
-    'release-url': RELEASE_URL, // Release URL to view the release
+    'release-url': releaseUrl, // Release URL to view the release
   };
 
   try {
@@ -56,4 +56,4 @@ const formattedMessage = formatMessage(
   TYPE
 );
 
-sendSlackVariables(formattedMessage);
+sendSlackVariables(formattedMessage, RELEASE_URL);
