@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.10...v1.0.11) (2024-10-25)
+
+
+### Bug Fixes
+
+* **version:** import path ([bf6cfa7](https://github.com/scrumsdotcom/semantic-release-config/commit/bf6cfa7e6ac8394c002fd0b19f966706c8a2593a))
+
 ## [1.0.10](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.9...v1.0.10) (2024-10-25)
 
 
