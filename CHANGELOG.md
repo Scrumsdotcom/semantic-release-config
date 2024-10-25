@@ -1,3 +1,10 @@
+## [1.0.50](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.49...v1.0.50) (2024-10-25)
+
+
+### Bug Fixes
+
+* develop ([0a56527](https://github.com/scrumsdotcom/semantic-release-config/commit/0a56527d3be7fac56a58b9c0dcb9ccf724fe7fdb))
+
 ## [1.0.49](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.48...v1.0.49) (2024-10-25)
 
 
