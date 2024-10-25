@@ -1,3 +1,10 @@
+## [1.0.14](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.13...v1.0.14) (2024-10-25)
+
+
+### Bug Fixes
+
+* **version:** dont destructure ([5caec2d](https://github.com/scrumsdotcom/semantic-release-config/commit/5caec2db21d4c0e6e469928357fc0133e177a03e))
+
 ## [1.0.13](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.12...v1.0.13) (2024-10-25)
 
 
