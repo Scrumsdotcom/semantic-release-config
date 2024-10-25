@@ -32,13 +32,12 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Merge main into develop (keep develop's version)
+      - name: Merge main into develop
         run: |
-          git fetch 
-
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
 
-          git merge -X ours main
+          git checkout develop
+          git merge origin/main --no-edit --allow-unrelated-histories
 
           git push origin develop
