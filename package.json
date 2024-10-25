@@ -40,7 +40,8 @@
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^12.0.1",
-    "@semantic-release/release-notes-generator": "^14.0.1"
+    "@semantic-release/release-notes-generator": "^14.0.1",
+    "axios": "^1.7.7"
   },
   "peerDependencies": {
     "@intuit/semantic-release-slack": "^1.0.11",
@@ -50,6 +51,7 @@
     "micromatch": "^4.0.8"
   },
   "scripts": {
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "notify-slack": "node notify-slack.js"
   }
 }
