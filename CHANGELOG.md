@@ -1,3 +1,10 @@
+## [1.0.49](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.48...v1.0.49) (2024-10-25)
+
+
+### Bug Fixes
+
+* spacing ([9701c53](https://github.com/scrumsdotcom/semantic-release-config/commit/9701c53f25a86a79aaf9b7a441aa8d9b64da663b))
+
 ## [1.0.48](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.47...v1.0.48) (2024-10-25)
 
 
