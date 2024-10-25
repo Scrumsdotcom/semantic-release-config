@@ -4,38 +4,55 @@ const path = require('path');
 // Get the Slack Webhook URL from environment variables.
 const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
 
-// Load package.json to extract version
+// Load package.json to extract version and package name
 const packageJson = require(path.join(__dirname, 'package.json'));
 
-// Get the release version and release URL from command-line arguments
+// Build the release URL from the package version
 const RELEASE_URL = `https://github.com/scrumsdotcom/semantic-release-config/releases/tag/v${packageJson.version}`;
 
-const TYPE = process.argv[4] || 'success';
+// Get the message type (success or failure) from the command-line arguments
+const TYPE = process.env.TYPE || 'success';
 
-// Sends the provided variables as the payload via the webhook
-const sendSlackVariables = async (
-  version,
-  releaseUrl,
-  messageType,
-  packageName
-) => {
+/**
+ * Function to build and return the Slack message based on success or failure.
+ */
+const formatMessage = (version, releaseUrl, packageName, messageType) => {
+  if (messageType === 'success') {
+    return `🎉 *Release Successful!* 🎉\n
+            Version: *${version}*\n
+            Package: *${packageName}*\n
+            Release URL: <${releaseUrl}|View Release>\n
+            Keep up the great work! 🚀`;
+  } else {
+    return `❌ *Release Failed* ❌\n
+            Version: *${version}*\n
+            Package: *${packageName}*\n
+            Please review the release process or check the logs for more details: <${releaseUrl}|View Logs>\n
+            We hope for a better release journey next time. ⚠️`;
+  }
+};
+
+// Sends the message as the payload via the webhook
+const sendSlackVariables = async (formattedMessage) => {
   const payload = {
-    version: version,
-    'package-name': packageName,
-    'release-url': releaseUrl,
-    status: messageType, // Possibly to indicate if it's a success or failure event
+    text: formattedMessage, // Slack message content expected by the webhook workflow
   };
 
   try {
     // Post the variables to the Slack workflow webhook endpoint
     await axios.post(SLACK_WEBHOOK_URL, payload);
-    console.log(
-      `Slack notification (${messageType}) variables sent successfully for version ${VERSION}`
-    );
+    console.log(`Slack notification sent successfully.`);
   } catch (error) {
     console.error('Error sending Slack notification:', error);
   }
 };
 
-// Send the variables for formatting in the pre-set Slack message template
-sendSlackVariables(packageJson.version, RELEASE_URL, TYPE, packageJson.name);
+// Format and send the message
+const formattedMessage = formatMessage(
+  packageJson.version,
+  RELEASE_URL,
+  packageJson.name,
+  TYPE
+);
+
+sendSlackVariables(formattedMessage);
