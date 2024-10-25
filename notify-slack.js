@@ -10,6 +10,8 @@ const packageJson = require(path.join(__dirname, 'package.json'));
 // Build the release URL from the package version
 const RELEASE_URL = `https://github.com/scrumsdotcom/semantic-release-config/releases/tag/v${packageJson.version}`;
 
+const APP_URL = 'https://www.scrums.com';
+
 // Get the message type (success or failure) from the command-line arguments
 const TYPE = process.env.TYPE || 'success';
 
@@ -18,27 +20,29 @@ const TYPE = process.env.TYPE || 'success';
  */
 const formatMessage = (version, releaseUrl, packageName, messageType) => {
   if (messageType === 'success') {
-    return `🎉 *Release Successful!* 🎉\n
+    return `***Release Successful!*** 🎉\n
             Version: *${version}*\n
             Package: *${packageName}*\n
-            Release URL: <${releaseUrl}|View Release>\n
             Keep up the great work! 🚀`;
   } else {
-    return `❌ *Release Failed* ❌\n
+    return `❌ ***Release Failed*** ❌\n
             Version: *${version}*\n
             Package: *${packageName}*\n
-            Please review the release process or check the logs for more details: <${releaseUrl}|View Logs>\n
-            We hope for a better release journey next time. ⚠️`;
+            We hope for a better release journey next time. ☮`;
   }
 };
 
 // Sends the message as the payload via the webhook
-const sendSlackVariables = async (text, releaseUrl) => {
+const sendSlackVariables = async (text, releaseUrl, appUrl) => {
   console.log('Sending Slack notification params: ', { text, releaseUrl });
 
   try {
     // Post the variables to the Slack workflow webhook endpoint
-    await axios.post(SLACK_WEBHOOK_URL, { text, 'release-url': releaseUrl });
+    await axios.post(SLACK_WEBHOOK_URL, {
+      text,
+      'release-url': releaseUrl,
+      'app-url': appUrl,
+    });
     console.log(`Slack notification sent successfully.`);
   } catch (error) {
     console.error('Error sending Slack notification:', error);
@@ -53,4 +57,4 @@ const formattedMessage = formatMessage(
   TYPE
 );
 
-sendSlackVariables(formattedMessage, RELEASE_URL);
+sendSlackVariables(formattedMessage, RELEASE_URL, APP_URL);
