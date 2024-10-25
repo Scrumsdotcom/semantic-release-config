@@ -37,6 +37,6 @@ jobs:
           git fetch
           git checkout develop
           git config pull.rebase false
-          git pull origin main --no-edit --allow-unrelated-histories 
+          git merge origin/main --no-edit || true
           git commit --amend -m "Merge main into develop [ci skip]"
           git push origin develop
