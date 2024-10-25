@@ -43,3 +43,6 @@ jobs:
         run: npm run notify-slack ${{ env.VERSION }} failure
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+env:
+  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
