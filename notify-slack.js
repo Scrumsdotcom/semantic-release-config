@@ -19,18 +19,20 @@ const TYPE = process.argv[2]; // Pass 'success' or 'failure' as a command-line a
 /**
  * Function to build the Slack message content based on success or failure.
  */
-const formatMessage = (version, messageType) => {
+const formatMessage = (version, messageType, packageName) => {
   if (messageType === 'success') {
     // Slack likes fewer spaces around new lines for proper formatting
     return (
-      `:tada: *Release Successful!*\n` + // Single asterisks should now bold "Release Successful!"
-      `*Version:* \`${version}\`\n` + // Bold "Version:" with fixed-width "version"
-      `Great job! Keep up the amazing work! :rocket: :confetti_ball:`
+      `🎉 *Release Successful!*\n` +
+      `Package: \`${packageName}\`\n` +
+      `Version: \`${version}\`\n` +
+      `Great job! Wunderbar! Mazel Tov! 🚀`
     );
   } else {
     return (
-      `:x: *Release Failed*\n` + // Single asterisks should bold "Release Failed"
-      `*Version:* \`${version}\`\n` + // Same formatting for version
+      `❌ Release Failed\n` + // Single asterisks should bold "Release Failed"
+      `Package: \`${packageJson.name}\`\n` +
+      `Version: \`${version}\`\n` + // Same formatting for version
       `Please review the release process and try again. Reach out if help is needed. :warning:`
     );
   }
@@ -58,7 +60,11 @@ const sendSlackVariables = async (appUrl, text, releaseUrl) => {
 };
 
 // Format the message based on release outcome (success/failure)
-const formattedMessage = formatMessage(packageJson.version, TYPE);
+const formattedMessage = formatMessage(
+  packageJson.version,
+  TYPE,
+  packageJson.name
+);
 
 // Send the Slack Notification with your predefined variables
 sendSlackVariables(APP_URL, formattedMessage, RELEASE_URL);
