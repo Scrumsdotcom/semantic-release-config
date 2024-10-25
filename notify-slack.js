@@ -33,15 +33,13 @@ const formatMessage = (version, releaseUrl, packageName, messageType) => {
 };
 
 // Sends the message as the payload via the webhook
-const sendSlackVariables = async (formattedMessage, releaseUrl) => {
-  const payload = {
-    text: formattedMessage, // Slack message content expected by the webhook workflow
-    'release-url': releaseUrl, // Release URL to view the release
-  };
-
+const sendSlackVariables = async (text, releaseUrl) => {
   try {
     // Post the variables to the Slack workflow webhook endpoint
-    await axios.post(SLACK_WEBHOOK_URL, payload);
+    await axios.post(SLACK_WEBHOOK_URL, {
+      text: text, // Slack message content expected by the webhook workflow
+      'release-url': releaseUrl, // Release URL to view the release
+    });
     console.log(`Slack notification sent successfully.`);
   } catch (error) {
     console.error('Error sending Slack notification:', error);
@@ -55,5 +53,7 @@ const formattedMessage = formatMessage(
   packageJson.name,
   TYPE
 );
+
+console.log('Tryng to send Slack notification...', formattedMessage);
 
 sendSlackVariables(formattedMessage, RELEASE_URL);
