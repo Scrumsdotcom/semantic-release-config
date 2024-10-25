@@ -26,20 +26,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Step 5: Get the version dynamically from package.json and store it in $VERSION
-      - name: Get the version from package.json
-        run: |
-          VERSION=$(node -p "require('./package.json').version")
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
-
-      # Step 6: Send Slack notification on success
       - name: Slack notification on success
         if: success()
         run: npm run notify-slack ${{ env.VERSION }} success
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
-      # Step 7: Send Slack notification on failure
       - name: Slack notification on failure
         if: failure()
         run: npm run notify-slack ${{ env.VERSION }} failure
