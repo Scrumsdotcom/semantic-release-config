@@ -1,6 +1,6 @@
 {
   "name": "@scrumsdotcom/semantic-release-config",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "description": "Scrums.com's semantic-release shareable configuration",
   "main": ".releaserc.json",
   "files": [
