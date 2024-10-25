@@ -11,10 +11,13 @@
 		],
 		"@semantic-release/git",
 		[
-			"semantic-release-slack-bot",
+			"@intuit/semantic-release-slack",
 			{
-				"notifyOnSuccess": true,
-				"notifyOnFail": true
+				"platforms": [
+					"brew",
+					"npm",
+					"docker"
+				]
 			}
 		]
 	]
