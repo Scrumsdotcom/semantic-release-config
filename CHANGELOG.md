@@ -1,3 +1,15 @@
+## [1.0.43](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.42...v1.0.43) (2024-10-25)
+
+
+### Bug Fixes
+
+* spacing ([ee1e1c1](https://github.com/scrumsdotcom/semantic-release-config/commit/ee1e1c19819509a6f9b865790b02e34881dd6bdc))
+* **spacing:** trigger minor version ([35e3934](https://github.com/scrumsdotcom/semantic-release-config/commit/35e3934c4a891921615e4f6ba6f37cfb274b7e92))
+* trigger minor ([784eddf](https://github.com/scrumsdotcom/semantic-release-config/commit/784eddf9d04b317229443c2750d1bc56bfd5a7af))
+* **workflows:** reference different envs ([fb47bcc](https://github.com/scrumsdotcom/semantic-release-config/commit/fb47bcccae17d64358d9d465fa20f09a15e47f7e))
+* **workflows:** reference different envs ([99f3788](https://github.com/scrumsdotcom/semantic-release-config/commit/99f37886bb25252bac35210f4cb74258b1315fc6))
+* **workflows:** trigger only on main ([db5d797](https://github.com/scrumsdotcom/semantic-release-config/commit/db5d7971e06f9ee592a247692a52dc88b28d4d0a))
+
 ## [1.0.42](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.41...v1.0.42) (2024-10-25)
 
 
