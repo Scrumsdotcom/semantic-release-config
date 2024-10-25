@@ -2,9 +2,9 @@ name: Node.js Package Publish
 
 on:
   workflow_dispatch: # This is a custom event
-  # push:
-  #   branches:
-  #     - master
+  push:
+    branches:
+      - master
 
 jobs:
   release:
