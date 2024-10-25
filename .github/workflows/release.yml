@@ -27,14 +27,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set TYPE variable
-        run: |
-          if [ ${{ steps.release.outcome }} == "success" ]; then 
-            echo "TYPE=success" >> $GITHUB_ENV
-          else
-            echo "TYPE=failure" >> $GITHUB_ENV
-          fi
-
       - name: Slack notification on success
         if: success()
         run: npm run notify-slack ${{ env.VERSION }} success
