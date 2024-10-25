@@ -1,3 +1,10 @@
+## [1.0.12](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.11...v1.0.12) (2024-10-25)
+
+
+### Bug Fixes
+
+* **version:** update messager vars ([152930a](https://github.com/scrumsdotcom/semantic-release-config/commit/152930a689900e7390a75c1fe20f87d383c29c3e))
+
 ## [1.0.11](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.10...v1.0.11) (2024-10-25)
 
 
