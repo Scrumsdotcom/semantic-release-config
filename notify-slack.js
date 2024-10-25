@@ -21,36 +21,29 @@ const TYPE = process.argv[2]; // Pass 'success' or 'failure' as a command-line a
  */
 const formatMessage = (version, messageType) => {
   if (messageType === 'success') {
-    return `🎉 ***Release Successful!***\n
-            Version: *${version}*\n
-            Keep up the great work! 🚀`;
+    return `🎉 *Release Successful!*\n\n
+            *Version*: ${version}\n
+            Great job! Keep up the amazing work! 🚀`;
   } else {
-    return `❌ ***Release Failed***\n
-            Version: *${version}*\n
-            Please review the release process.`;
+    return `❌ *Release Failed*\n
+            *Version*: ${version}\n
+            Please review the release process and try again. Reach out if help is needed. 🚧`;
   }
 };
 
-/**
- * Sends the message as the JSON payload via webhook.
- */
+// Sends the message as the JSON payload via webhook.
 const sendSlackVariables = async (appUrl, text, releaseUrl) => {
-  // Construct the payload
-  const payload = {
-    'app-url': appUrl,
-    text,
-    'release-url': releaseUrl,
-  };
-
   try {
     // Post the request to Slack Webhook endpoint
     await axios({
       method: 'post',
       url: SLACK_WEBHOOK_URL,
-      headers: {
-        'Content-Type': 'application/json', // Required content type
+      headers: { 'Content-Type': 'application/json' },
+      data: {
+        'app-url': appUrl,
+        text,
+        'release-url': releaseUrl,
       },
-      data: payload, // Send data as payload
     });
 
     console.log('Slack notification sent successfully.');
