@@ -60,7 +60,7 @@ const sendSlackVariables = async (appUrl, text, releaseUrl, slackWebhook) => {
 // Format the message based on release outcome (success/failure)
 const FORMATTED_MESSAGE = formatMessage(
   config.PACKAGE_JSON.version,
-  confg.TYPE,
+  config.TYPE,
   config.PACKAGE_JSON.name
 );
 
