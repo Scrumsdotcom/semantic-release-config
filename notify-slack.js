@@ -35,6 +35,7 @@ const formatMessage = (version, releaseUrl, packageName, messageType) => {
 // Sends the message as the payload via the webhook
 const sendSlackVariables = async (text, releaseUrl) => {
   console.log('Sending Slack notification params...', text, releaseUrl);
+
   try {
     // Post the variables to the Slack workflow webhook endpoint
     await axios.post(SLACK_WEBHOOK_URL, { text, 'release-url': releaseUrl });
