@@ -1,56 +1,34 @@
 const axios = require('axios');
-const path = require('path');
+
+// Get the Slack Webhook URL from environment variables.
+const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
 
 // Load package.json to extract version
 const packageJson = require(path.join(__dirname, 'package.json'));
 const VERSION = packageJson.version;
 
-// Get type (success or failure) from command-line arguments
-const type = process.argv[2] || 'success';
+// Get the release version and release URL from command-line arguments
+const RELEASE_URL = `https://github.com/scrumsdotcom/semantic-release-config/releases/tag/${packageJson.version}`;
+const TYPE = process.argv[4] || 'success';
 
-// Your Slack Incoming Webhook URL (passed as an environment variable)
-const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
-
-const sendSlackNotification = async (version, messageType) => {
+// Sends the provided variables as the payload via the webhook
+const sendSlackVariables = async (version, releaseUrl, messageType) => {
   const payload = {
-    success: {
-      text: `🎉 *Success!* Version *${version}* of *${packageJson.name}* has been released! 🚀`,
-      attachments: [
-        {
-          color: '#36a64f',
-          fields: [
-            { title: 'Version', value: version, short: true },
-            { title: 'Package Name', value: packageJson.name, short: true },
-          ],
-          text: `You can check the release details here: <https://github.com/your-org/your-repo/releases/tag/${version}|Release Page>\nOr access the dashboard: <https://your-dashboard-link.com/releases/${version}|Dashboard>`,
-        },
-      ],
-    },
-    failure: {
-      text: `❌ *Release Failure* for version *${version}* of *${packageJson.name}*`,
-      attachments: [
-        {
-          color: '#ff0000',
-          fields: [
-            { title: 'Version', value: version, short: true },
-            { title: 'Package Name', value: packageJson.name, short: true },
-          ],
-          text: `😞 The release failed. Check the logs for more details: <https://github.com/your-org/your-repo/actions|GitHub Actions Logs>.`,
-        },
-      ],
-    },
+    'release-version': VERSION,
+    'release-url': releaseUrl,
+    'release-status': messageType, // Possibly to indicate if it's a success or failure event
   };
 
   try {
-    // Post the payload to Slack
-    await axios.post(SLACK_WEBHOOK_URL, payload[messageType]);
+    // Post the variables to the Slack workflow webhook endpoint
+    await axios.post(SLACK_WEBHOOK_URL, payload);
     console.log(
-      `Slack notification (${messageType}) sent successfully for version ${version}`
+      `Slack notification (${messageType}) variables sent successfully for version ${VERSION}`
     );
   } catch (error) {
     console.error('Error sending Slack notification:', error);
   }
 };
 
-// Call the function to send the notification based on the outcome
-sendSlackNotification(VERSION, type);
+// Send the variables for formatting in the pre-set Slack message template
+sendSlackVariables(VERSION, RELEASE_URL, TYPE);
