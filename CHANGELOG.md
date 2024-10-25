@@ -1,3 +1,10 @@
+## [1.0.58](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.57...v1.0.58) (2024-10-25)
+
+
+### Bug Fixes
+
+* define strategy ([8437c0b](https://github.com/scrumsdotcom/semantic-release-config/commit/8437c0b93172f746b9c82b9d75f62fc61f5c5f0e))
+
 ## [1.0.57](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.56...v1.0.57) (2024-10-25)
 
 
