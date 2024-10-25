@@ -1,3 +1,10 @@
+## [1.0.23](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.22...v1.0.23) (2024-10-25)
+
+
+### Bug Fixes
+
+* include app url button ([89f496c](https://github.com/scrumsdotcom/semantic-release-config/commit/89f496c2dc8b54cd845531c36c989302c6fc6dac))
+
 ## [1.0.22](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.21...v1.0.22) (2024-10-25)
 
 
