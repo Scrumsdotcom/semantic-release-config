@@ -1,3 +1,10 @@
+## [1.0.42](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.41...v1.0.42) (2024-10-25)
+
+
+### Bug Fixes
+
+* package json ([868da58](https://github.com/scrumsdotcom/semantic-release-config/commit/868da584d2e3d6a52a0618b69e23b7b139f1257f))
+
 ## [1.0.41](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.40...v1.0.41) (2024-10-25)
 
 
