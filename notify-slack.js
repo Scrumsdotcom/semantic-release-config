@@ -21,13 +21,18 @@ const TYPE = process.argv[2]; // Pass 'success' or 'failure' as a command-line a
  */
 const formatMessage = (version, messageType) => {
   if (messageType === 'success') {
-    return `🎉 *Release Successful!*\n\n
-            *Version*: ${version}\n
-            Great job! Keep up the amazing work! 🚀`;
+    // Slack likes fewer spaces around new lines for proper formatting
+    return (
+      `:tada: *Release Successful!*\n` + // Single asterisks should now bold "Release Successful!"
+      `*Version:* \`${version}\`\n` + // Bold "Version:" with fixed-width "version"
+      `Great job! Keep up the amazing work! :rocket: :confetti_ball:`
+    );
   } else {
-    return `❌ *Release Failed*\n
-            *Version*: ${version}\n
-            Please review the release process and try again. Reach out if help is needed. 🚧`;
+    return (
+      `:x: *Release Failed*\n` + // Single asterisks should bold "Release Failed"
+      `*Version:* \`${version}\`\n` + // Same formatting for version
+      `Please review the release process and try again. Reach out if help is needed. :warning:`
+    );
   }
 };
 
