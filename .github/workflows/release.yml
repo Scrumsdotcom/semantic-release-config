@@ -27,7 +27,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Step 5: Set TYPE based on success or failure of previous step
       - name: Set TYPE variable
         run: |
           if [ ${{ steps.release.outcome }} == "success" ]; then 
@@ -35,10 +34,6 @@ jobs:
           else
             echo "TYPE=failure" >> $GITHUB_ENV
           fi
-
-      # Step 6 (Optional): Log the TYPE variable to check
-      - name: Check TYPE value
-        run: echo "The TYPE value is ${{ env.TYPE }}"
 
       - name: Slack notification on success
         if: success()
@@ -51,5 +46,6 @@ jobs:
         run: npm run notify-slack ${{ env.VERSION }} failure
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
 env:
   SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
