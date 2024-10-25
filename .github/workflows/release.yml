@@ -12,19 +12,24 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+
       - name: Install dependencies
         run: npm install
+
       - name: Run semantic-release
         run: npm run release
+        id: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Step 5: Set TYPE based on success or failure of previous step
       - name: Set TYPE variable
+        i
         run: |
           if [ ${{ steps.release.outcome }} == "success" ]; then 
             echo "TYPE=success" >> $GITHUB_ENV
