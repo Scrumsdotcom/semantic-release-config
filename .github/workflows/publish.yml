@@ -41,7 +41,7 @@ jobs:
 
           git pull origin develop
 
-          git merge origin/main --no-edit
+          git merge origin/main --allow-unrelated-histories --no-edit
 
           git commit --amend -m "Merge main into develop [ci skip]"
 
