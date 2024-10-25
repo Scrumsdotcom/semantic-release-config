@@ -38,4 +38,5 @@ jobs:
           git checkout develop
           git pull origin develop
           git merge origin/main --no-edit
+          git commit --amend -m "Merge main into develop [ci skip]"
           git push origin develop
