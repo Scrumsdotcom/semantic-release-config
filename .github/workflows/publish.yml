@@ -36,7 +36,12 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git fetch
           git checkout develop
-          git config pull.rebase false
-          git merge origin/main --no-edit || true
-          git commit --amend -m "Merge main into develop [ci skip]"
-          git push origin develop
+          git merge origin/main --allow-unrelated-histories --no-edit || true
+
+          if git ls-files -u | grep -q "^"; then
+            echo "Merge conflicts detected - resolve manually, or script custom resolution logic"
+            exit 1
+          fi
+
+          git commit --no-edit || true
+          git push origin develop --force
