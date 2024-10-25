@@ -7,7 +7,6 @@ const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
 // Load package.json to extract version
 const packageJson = require(path.join(__dirname, 'package.json'));
 const VERSION = packageJson.version;
-const packageJson = require(path.join(__dirname, 'package.json'));
 const PACKAGE_NAME = packageJson.name;
 
 // Get the release version and release URL from command-line arguments
