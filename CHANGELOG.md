@@ -1,3 +1,11 @@
+## [1.0.4](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.3...v1.0.4) (2024-10-25)
+
+
+### Bug Fixes
+
+* **name:** wrong file name ([7dbd191](https://github.com/scrumsdotcom/semantic-release-config/commit/7dbd1914f21e469845eb66a5f983152016cce690))
+* **release:** set up release script ([25564d1](https://github.com/scrumsdotcom/semantic-release-config/commit/25564d136c338df6b10e5720714f279342c53910))
+
 ## [1.0.3](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.2...v1.0.3) (2024-10-25)
 
 
