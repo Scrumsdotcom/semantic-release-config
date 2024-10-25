@@ -2,47 +2,49 @@ name: Node.js Package Publish
 
 on:
   workflow_run:
-    workflows: ['release']
+    workflows: ['release'] # After the Release workflow finishes
     types:
       - completed
 
 jobs:
-  release:
-    name: Publish to npm
+  publish_and_sync:
     runs-on: ubuntu-latest
 
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
-      - name: Checkout code
+      # 1. Checkout the main branch first to get the latest release state
+      - name: Checkout main branch
         uses: actions/checkout@v4
-      - name: Set up Node.js
+        with:
+          ref: main # Explicitly check out the main branch
+
+      # Set up node for npm-related tasks
+      - name: Set up Node.js for npm publish
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Install dependencies
-        run: npm i
-
-      - name: Publish to npm
+      # Publish to npm
+      - name: Publish to NPM
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Merge main into develop
+      # 2. Sync DEVELOP branch: Cherry-pick the relevant changes (version bump and changelog) from main to develop
+      - name: Checkout develop branch
         run: |
+          # Reconfigure git identity
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
 
-          git fetch
-
+          # Fetch develop and checkout
           git checkout develop
-
           git pull origin develop
 
-          git merge origin/main --allow-unrelated-histories --no-edit
+          # Cherry-pick the latest commit that bumped version on main
+          git cherry-pick -m 1 origin/main
 
-          git commit --amend -m "Merge main into develop [ci skip]"
-
+          # Push the change to develop
           git push origin develop
