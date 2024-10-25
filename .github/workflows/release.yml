@@ -26,9 +26,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Get version from package.json
-        id: get_version
-        run: echo "VERSION=$(node -p \"require('./package.json').version\")" >> $GITHUB_ENV
+      # Step 5: Get the version dynamically from package.json and store it in $VERSION
+      - name: Get the version from package.json
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
 
       # Step 6: Send Slack notification on success
       - name: Slack notification on success
