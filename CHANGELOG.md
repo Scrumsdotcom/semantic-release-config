@@ -1,3 +1,17 @@
+## [1.0.44](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.43...v1.0.44) (2024-10-25)
+
+
+### Bug Fixes
+
+* fetch before checking out ([c798069](https://github.com/scrumsdotcom/semantic-release-config/commit/c79806926244fe9306e94036d361c2e9c959c7da))
+* fetch before checking out ([397db9f](https://github.com/scrumsdotcom/semantic-release-config/commit/397db9fab9f3417d258c844080ee74717f174236))
+* force version bump ([2f03c66](https://github.com/scrumsdotcom/semantic-release-config/commit/2f03c66f35a6d494fb229d3e26db05a31a0b79e6))
+* **semantic:** when t runs ([cf3b53c](https://github.com/scrumsdotcom/semantic-release-config/commit/cf3b53c99f1204a9dc0252fb9925398d3673ea78))
+* skip CI ([a40dee1](https://github.com/scrumsdotcom/semantic-release-config/commit/a40dee156573e9c2f8a5d600ec1fbe035252afba))
+* skip CI ([46f2521](https://github.com/scrumsdotcom/semantic-release-config/commit/46f25215ac9c98abb26f63ac215df7458fb8145c))
+* spacing ([1db6486](https://github.com/scrumsdotcom/semantic-release-config/commit/1db6486722901289bda163d3ab54ea08b8fa47d5))
+* **workflows:** only trigger on merge PR to main ([a683db9](https://github.com/scrumsdotcom/semantic-release-config/commit/a683db9a51f665d392ccbbc3a713acba3ba0fa40))
+
 ## [1.0.43](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.42...v1.0.43) (2024-10-25)
 
 
