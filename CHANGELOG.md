@@ -1,3 +1,11 @@
+## [1.0.62](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.61...v1.0.62) (2024-10-25)
+
+
+### Bug Fixes
+
+* remove keyword to test if releases continue to work ([58600fb](https://github.com/scrumsdotcom/semantic-release-config/commit/58600fb3649815a74a85d062723b17f978fb6dd4))
+* remove keyword to test if releases continue to work ([aec9e9f](https://github.com/scrumsdotcom/semantic-release-config/commit/aec9e9ff4653fe5aaf767e9700aee692b1b485fd))
+
 ## [1.0.61](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.60...v1.0.61) (2024-10-25)
 
 
