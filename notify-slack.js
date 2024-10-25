@@ -7,17 +7,21 @@ const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
 // Load package.json to extract version
 const packageJson = require(path.join(__dirname, 'package.json'));
 const VERSION = packageJson.version;
+const packageJson = require(path.join(__dirname, 'package.json'));
+const PACKAGE_NAME = packageJson.name;
 
 // Get the release version and release URL from command-line arguments
-const RELEASE_URL = `https://github.com/scrumsdotcom/semantic-release-config/releases/tag/${packageJson.version}`;
+const RELEASE_URL = `https://github.com/scrumsdotcom/semantic-release-config/releases/tag/v${packageJson.version}`;
+
 const TYPE = process.argv[4] || 'success';
 
 // Sends the provided variables as the payload via the webhook
-const sendSlackVariables = async (version, releaseUrl, messageType) => {
+const sendSlackVariables = async ({ version, releaseUrl, messageType, packageName }) => {
   const payload = {
-    'release-version': VERSION,
+    'version': version,
+    "package-name" packageName: 
     'release-url': releaseUrl,
-    'release-status': messageType, // Possibly to indicate if it's a success or failure event
+    'status': messageType, // Possibly to indicate if it's a success or failure event
   };
 
   try {
@@ -32,4 +36,4 @@ const sendSlackVariables = async (version, releaseUrl, messageType) => {
 };
 
 // Send the variables for formatting in the pre-set Slack message template
-sendSlackVariables(VERSION, RELEASE_URL, TYPE);
+sendSlackVariables({ version: VERSION,releaseUrl: RELEASE_URL, messageType: TYPE, packageName: PACKAGE_NAME });
