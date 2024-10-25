@@ -15,7 +15,7 @@ const RELEASE_URL = `https://github.com/scrumsdotcom/semantic-release-config/rel
 const TYPE = process.argv[4] || 'success';
 
 // Sends the provided variables as the payload via the webhook
-const sendSlackVariables = async ({ version, releaseUrl, messageType, packageName }) => {
+const sendSlackVariables = async (version, releaseUrl, messageType, packageName) => {
   const payload = {
     'version': version,
     "package-name" packageName: 
@@ -35,4 +35,4 @@ const sendSlackVariables = async ({ version, releaseUrl, messageType, packageNam
 };
 
 // Send the variables for formatting in the pre-set Slack message template
-sendSlackVariables({ version: VERSION,releaseUrl: RELEASE_URL, messageType: TYPE, packageName: PACKAGE_NAME });
+sendSlackVariables(VERSION, RELEASE_URL, TYPE, PACKAGE_NAME );
