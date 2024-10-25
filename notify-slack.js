@@ -23,16 +23,16 @@ const formatMessage = (version, messageType, packageName) => {
   if (messageType === 'success') {
     // Slack likes fewer spaces around new lines for proper formatting
     return (
-      `🎉 *Release Successful!*\n` +
-      `Package: \`${packageName}\`\n` +
-      `Version: \`${version}\`\n` +
+      `🎉 *Release Successful!*\n\n` +
+      `Package: ${packageName}\n` +
+      `Version: ${version}\n\n` +
       `Great job! Wunderbar! Mazel Tov! 🚀`
     );
   } else {
     return (
-      `❌ Release Failed\n` + // Single asterisks should bold "Release Failed"
-      `Package: \`${packageJson.name}\`\n` +
-      `Version: \`${version}\`\n` + // Same formatting for version
+      `❌ Release Failed\n\n` + // Single asterisks should bold "Release Failed"
+      `Package: ${packageJson.name}\n` +
+      `Version: ${version}\n\n` + // Same formatting for version
       `Please review the release process and try again. Reach out if help is needed. :warning:`
     );
   }
