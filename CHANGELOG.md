@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.5...v1.0.6) (2024-10-25)
+
+
+### Bug Fixes
+
+* **version:** get app v ersion ([8cc5d74](https://github.com/scrumsdotcom/semantic-release-config/commit/8cc5d746bbc7409c56332fa0ea2a79a8ac48dd1f))
+
 ## [1.0.5](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.4...v1.0.5) (2024-10-25)
 
 
