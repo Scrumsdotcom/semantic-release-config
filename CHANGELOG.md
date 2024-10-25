@@ -1,3 +1,10 @@
+## [1.0.18](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.17...v1.0.18) (2024-10-25)
+
+
+### Bug Fixes
+
+* order ([cd63f0b](https://github.com/scrumsdotcom/semantic-release-config/commit/cd63f0b8c11dbd7fd14e0a1dd75b4c0175988916))
+
 ## [1.0.17](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.16...v1.0.17) (2024-10-25)
 
 
