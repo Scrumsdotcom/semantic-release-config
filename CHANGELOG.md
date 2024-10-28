@@ -1,3 +1,10 @@
+## [1.0.64](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.63...v1.0.64) (2024-10-28)
+
+
+### Bug Fixes
+
+* **overall:** clear out slack stuff - this can be managed by a project ([4e9e6cb](https://github.com/scrumsdotcom/semantic-release-config/commit/4e9e6cb093ed2cae1c60789ca0ab9bd41a446cf5))
+
 ## [1.0.63](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.62...v1.0.63) (2024-10-25)
 
 
