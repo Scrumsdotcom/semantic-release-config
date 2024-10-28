@@ -1,3 +1,11 @@
+## [1.0.66](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.65...v1.0.66) (2024-10-28)
+
+
+### Bug Fixes
+
+* **docs:** update README ([04a5312](https://github.com/scrumsdotcom/semantic-release-config/commit/04a5312af8d797b8c492c8dec03449b891cdebb3))
+* **docs:** update README ([17c9f1b](https://github.com/scrumsdotcom/semantic-release-config/commit/17c9f1b8dcd9b9901e0c1e773bc6073190280fe0))
+
 ## [1.0.65](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.64...v1.0.65) (2024-10-28)
 
 
