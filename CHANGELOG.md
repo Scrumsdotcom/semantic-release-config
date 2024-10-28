@@ -1,3 +1,10 @@
+## [1.0.68](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.67...v1.0.68) (2024-10-28)
+
+
+### Bug Fixes
+
+* documentation ([03ff402](https://github.com/scrumsdotcom/semantic-release-config/commit/03ff40275ddb184fa9e6ca3214dbe2ae44e54f02))
+
 ## [1.0.67](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.66...v1.0.67) (2024-10-28)
 
 
