@@ -3,6 +3,7 @@
   "version": "0.0.0-development",
   "description": "Scrums.com's semantic-release shareable configuration",
   "main": ".releaserc.json",
+  "license": "MIT",
   "files": [
     ".releaserc.json"
   ],
@@ -29,7 +30,6 @@
       "email": "danielmharten@gmail.com"
     }
   ],
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/scrumsdotcom/semantic-release-config/issues"
   },
@@ -39,11 +39,9 @@
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^12.0.1",
-    "@semantic-release/release-notes-generator": "^14.0.1",
-    "axios": "^1.7.7"
+    "@semantic-release/release-notes-generator": "^14.0.1"
   },
   "peerDependencies": {
-    "@intuit/semantic-release-slack": "^1.0.11",
     "semantic-release": ">=15.13.31"
   },
   "resolutions": {
@@ -51,7 +49,6 @@
     "debug": "^4.3.1"
   },
   "scripts": {
-    "release": "semantic-release",
-    "notify-slack": "node notify-slack.js"
+    "release": "semantic-release"
   }
 }

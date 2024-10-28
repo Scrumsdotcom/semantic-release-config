@@ -22,39 +22,22 @@ This [shareable configuration](https://github.com/sovtech/semantic-release-confi
 - [`@semantic-release/release-notes-generator`](https://github.com/semantic-release/release-notes-generator)
 - [`@semantic-release/npm`](https://github.com/semantic-release/npm)
 - [`@semantic-release/git`](https://github.com/semantic-release/git)
-- [`semantic-release-slack-bot`](https://github.com/juliuscc/semantic-release-slack-bot)
 
 ## Summary
 
 - Provides an informative [git](https://github.com/semantic-release/git) commit message for the release commit that does not trigger continuous integration and conforms to the [conventional commits specification](https://www.conventionalcommits.org/) (e.g., "chore(release): 1.2.3 [skip ci]\n\nnotes").
 - Commits the version change in `package.json`.
 - Creates or updates a [changelog](https://github.com/semantic-release/changelog) file.
-- Posts updates from above changelog to a slack channel.
 
 ## Install
 
-With yarn:
+With your package manager of choice:
 
 ```bash
 $ yarn add -D semantic-release @scrumsdotcom/semantic-release-config
-```
-
-With npm:
-
-```bash
 $ npm install --save-dev semantic-release @scrumsdotcom/semantic-release-config
-```
-
-With pnpm:
-
-```bash
-$ pnpm add -D semantic-release @scrumsdotcom/semantic-release-config
-```
-
-With bun:
-
-```bash
 $ bun add -d semantic-release @scrumsdotcom/semantic-release-config
+$ pnpm add -D semantic-release @scrumsdotcom/semantic-release-config
 ```
 
 ## Usage
@@ -80,6 +63,8 @@ Or via `release` key in the project's `package.json` file:
 ```
 
 ## Configuration
+
+We decided to not include the Slack integration in the package, as this leads it to do too many things. Keep it simple, implement Slack if you please. Guide below 👇🏼
 
 Setup the Semantic Release slackbot integration on your Slack's workspace. [Setup Guide](https://github.com/juliuscc/semantic-release-slack-bot#configuration)
 
