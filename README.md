@@ -1,6 +1,6 @@
 # @scrumsdotcom/semantic-release-config
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)](https://github.com/scrumsdotcom/semantic-release-config) [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/scrumsdotcom/semantic-release-config#readme) [![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/scrumsdotcom/semantic-release-config/graphs/commit-activity) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/scrumsdotcom/semantic-release-config/blob/master/LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.68-blue.svg?cacheSeconds=2592000)](https://github.com/scrumsdotcom/semantic-release-config) [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/scrumsdotcom/semantic-release-config#readme) [![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/scrumsdotcom/semantic-release-config/graphs/commit-activity) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/scrumsdotcom/semantic-release-config/blob/master/LICENSE)
 
 This is Scrums.com's shareable configuration for **semantic-release**, designed to automate versioning and package publishing. This configuration follows the [Conventional Commits](https://www.conventionalcommits.org/) standard and integrates smoothly into popular CI/CD pipelines.
 
@@ -10,11 +10,7 @@ With this configuration, **semantic-release** will handle:
 
 - Automatic updates to your `package.json` version.
 - Creation and maintenance of a changelog.
-- Ensuring continuous software delivery by releasing only when specific conditions (like passing tests) are met.
-
-It also uses best practices for maintaining clean commits such as:
-
-- **Version bump commits**: Using the format "`chore(release): x.x.x [skip ci]`", which prevents unnecessary CI runs for version bumps.
+- Ensuring continuous software delivery by releasing only when specific conditions (like commit message requirements) are met.
 
 ---
 
@@ -22,17 +18,27 @@ It also uses best practices for maintaining clean commits such as:
 
 First, install the required packages in your project. You can choose your preferred package manager:
 
-```bash
 # Using Yarn
+
+```bash
 yarn add -D semantic-release @scrumsdotcom/semantic-release-config
+```
 
 # Using npm
+
+```bash
 npm install --save-dev semantic-release @scrumsdotcom/semantic-release-config
+```
 
 # Using pnpm
+
+```bash
 pnpm add -D semantic-release @scrumsdotcom/semantic-release-config
+```
 
 # Using Bun
+
+```bash
 bun add -d semantic-release @scrumsdotcom/semantic-release-config
 ```
 
