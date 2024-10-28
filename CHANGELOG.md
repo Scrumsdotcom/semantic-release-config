@@ -1,3 +1,33 @@
+## [1.0.63](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.62...v1.0.63) (2024-10-25)
+
+
+### Bug Fixes
+
+* remove keyword to test if releases continue to work ([0468532](https://github.com/scrumsdotcom/semantic-release-config/commit/0468532783fe65e84a65511a4325c40ba67f2b2a))
+
+## [1.0.62](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.61...v1.0.62) (2024-10-25)
+
+
+### Bug Fixes
+
+* remove keyword to test if releases continue to work ([58600fb](https://github.com/scrumsdotcom/semantic-release-config/commit/58600fb3649815a74a85d062723b17f978fb6dd4))
+* remove keyword to test if releases continue to work ([aec9e9f](https://github.com/scrumsdotcom/semantic-release-config/commit/aec9e9ff4653fe5aaf767e9700aee692b1b485fd))
+
+## [1.0.61](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.60...v1.0.61) (2024-10-25)
+
+
+### Bug Fixes
+
+* remove keyword to test if releases continue to work ([efbf88b](https://github.com/scrumsdotcom/semantic-release-config/commit/efbf88bf42101530288ecb2b4eb731f30fee81c7))
+
+## [1.0.60](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.59...v1.0.60) (2024-10-25)
+
+
+### Bug Fixes
+
+* define strategy ([cf9bcab](https://github.com/scrumsdotcom/semantic-release-config/commit/cf9bcab22abc3881efb3b7c8fe2dfe1690c840fd))
+* define strategy ([51fe3b6](https://github.com/scrumsdotcom/semantic-release-config/commit/51fe3b61e45ec145532bf8c7f174c4ed7a2a93c3))
+
 ## [1.0.59](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.58...v1.0.59) (2024-10-25)
 
 
