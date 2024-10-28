@@ -25,7 +25,7 @@ This [shareable configuration](https://github.com/sovtech/semantic-release-confi
 
 ## Summary
 
-- Provides an informative [git](https://github.com/semantic-release/git) commit message for the release commit that does not trigger continuous integration and conforms to the [conventional commits specification](https://www.conventionalcommits.org/) (e.g., "chore(release): 1.2.3 [skip ci]\n\nnotes").
+- Provides an informative [git](https://github.com/semantic-release/git) commit message for the release commit that does not trigger continuous integration and conforms to the [conventional commits specification](https://www.conventionalcommits.org/) (e.g., "`chore(release): 1.2.3 [skip ci]`").
 - Commits the version change in `package.json`.
 - Creates or updates a [changelog](https://github.com/semantic-release/changelog) file.
 
