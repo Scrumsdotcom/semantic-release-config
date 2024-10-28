@@ -1,3 +1,10 @@
+## [1.0.69](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.68...v1.0.69) (2024-10-28)
+
+
+### Bug Fixes
+
+* remove excess lines ([014d638](https://github.com/scrumsdotcom/semantic-release-config/commit/014d638261724dfe9eda7c8dff3e5882f246eb7d))
+
 ## [1.0.68](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.67...v1.0.68) (2024-10-28)
 
 
