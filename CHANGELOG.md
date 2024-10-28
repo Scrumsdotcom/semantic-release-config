@@ -1,3 +1,10 @@
+## [1.0.65](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.64...v1.0.65) (2024-10-28)
+
+
+### Bug Fixes
+
+* dont try commit back to develop ([30ff09c](https://github.com/scrumsdotcom/semantic-release-config/commit/30ff09cd2cf337d85f1df73d2b417945a24bba96))
+
 ## [1.0.64](https://github.com/scrumsdotcom/semantic-release-config/compare/v1.0.63...v1.0.64) (2024-10-28)
 
 
