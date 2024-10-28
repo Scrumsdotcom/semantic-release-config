@@ -1,6 +1,6 @@
 # @scrumsdotcom/semantic-release-config
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)](https://github.com/scrumsdotcom/semantic-release-config) [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/scrumsdotcom/semantic-release-config#readme) [![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/scrumsdotcom/semantic-release-config/graphs/commit-activity) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/scrumsdotcom/semantic-release-config/blob/master/LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.68-blue.svg?cacheSeconds=2592000)](https://github.com/scrumsdotcom/semantic-release-config) [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/scrumsdotcom/semantic-release-config#readme) [![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/scrumsdotcom/semantic-release-config/graphs/commit-activity) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/scrumsdotcom/semantic-release-config/blob/master/LICENSE)
 
 This is Scrums.com's shareable configuration for **semantic-release**, designed to automate versioning and package publishing. This configuration follows the [Conventional Commits](https://www.conventionalcommits.org/) standard and integrates smoothly into popular CI/CD pipelines.
 
