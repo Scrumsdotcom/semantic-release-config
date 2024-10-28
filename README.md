@@ -1,6 +1,6 @@
 # @scrumsdotcom/semantic-release-config
 
-[![Version](https://img.shields.io/badge/version-1.0.68-blue.svg?cacheSeconds=2592000)](https://github.com/scrumsdotcom/semantic-release-config) [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/scrumsdotcom/semantic-release-config#readme) [![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/scrumsdotcom/semantic-release-config/graphs/commit-activity) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/scrumsdotcom/semantic-release-config/blob/master/LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.69-blue.svg?cacheSeconds=2592000)](https://github.com/scrumsdotcom/semantic-release-config) [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/scrumsdotcom/semantic-release-config#readme) [![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/scrumsdotcom/semantic-release-config/graphs/commit-activity) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/scrumsdotcom/semantic-release-config/blob/master/LICENSE)
 
 This is Scrums.com's shareable configuration for **semantic-release**, designed to automate versioning and package publishing. This configuration follows the [Conventional Commits](https://www.conventionalcommits.org/) standard and integrates smoothly into popular CI/CD pipelines.
 
@@ -11,8 +11,6 @@ With this configuration, **semantic-release** will handle:
 - Automatic updates to your `package.json` version.
 - Creation and maintenance of a changelog.
 - Ensuring continuous software delivery by releasing only when specific conditions (like commit message requirements) are met.
-
----
 
 ## 🛠️ Installation
 
@@ -110,8 +108,6 @@ jobs:
 
 > **Note:** CI tools like GitHub Actions require a token to publish to GitHub. This should be automatically populated by the GitHub Action runner. However, if it doesn't for you, you can find more information about GitHub Actions secrets [here](-github-actions/security-guides/automatic-token-authentication).
 
----
-
 ## 🔌 Plugins Used by This Config
 
 Our configuration uses the following semantic-release plugins out of the box:
@@ -122,8 +118,6 @@ Our configuration uses the following semantic-release plugins out of the box:
 4. **[`@semantic-release/git`](https://github.com/semantic-release/git):** Commits the updated `package.json` and changelog after a release.
 
 Each plugin plays a specific role in ensuring a bulletproof release process, so no additional setup is typically required unless you’re customizing further.
-
----
 
 ## 📑 Additional Configuration (Optional)
 
@@ -139,8 +133,6 @@ For example, you can configure notifications to Slack using the [**semantic-rele
 - `SLACK_WEBHOOK`: The webhook URL from your Slack.
 - `SEMANTIC_RELEASE_PACKAGE`: (Optional) Custom package name for notifications.
 
----
-
 ## 🛑 Troubleshooting
 
 If you face issues while setting up or using the configuration, the official [**semantic-release** documentation](https://semantic-release.gitbook.io/semantic-release/) provides excellent resources, especially for:
@@ -148,14 +140,10 @@ If you face issues while setting up or using the configuration, the official [**
 - [CI Configuration](https://semantic-release.gitbook.io/semantic-release/usage/ci-configuration)
 - [Triggering a Release](https://semantic-release.gitbook.io/semantic-release/usage/configuration#triggering-a-release)
 
----
-
 ## 🌟 Support and Contributions
 
 If this project has been helpful to you, please consider giving it a star on GitHub. Contributions are welcome—feel free to submit issues or pull requests.
 
 [![GitHub stars](https://img.shields.io/github/stars/Scrumsdotcom/semantic-release-config.svg?style=social&label=Star)](https://github.com/Scrumsdotcom/semantic-release-config)
-
----
 
 Made with ❤️ by [Scrums.com](https://www.scrums.com)
