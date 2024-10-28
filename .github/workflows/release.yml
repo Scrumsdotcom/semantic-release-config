@@ -23,19 +23,5 @@ jobs:
 
       - name: Run semantic-release
         run: npm run release
-        id: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Slack notification on success
-        if: success()
-        run: npm run notify-slack ${{ env.VERSION }} success
-
-      - name: Slack notification on failure
-        if: failure()
-        run: npm run notify-slack ${{ env.VERSION }} failure
-
-env:
-  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-  APP_URL: ${{ vars.APP_URL }}
-  GH_REPO_URL: ${{ vars.GH_REPO_URL }}
