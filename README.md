@@ -10,11 +10,7 @@ With this configuration, **semantic-release** will handle:
 
 - Automatic updates to your `package.json` version.
 - Creation and maintenance of a changelog.
-- Ensuring continuous software delivery by releasing only when specific conditions (like passing tests) are met.
-
-It also uses best practices for maintaining clean commits such as:
-
-- **Version bump commits**: Using the format "`chore(release): x.x.x [skip ci]`", which prevents unnecessary CI runs for version bumps.
+- Ensuring continuous software delivery by releasing only when specific conditions (like commit message requirements) are met.
 
 ---
 
@@ -22,17 +18,27 @@ It also uses best practices for maintaining clean commits such as:
 
 First, install the required packages in your project. You can choose your preferred package manager:
 
-```bash
 # Using Yarn
+
+```bash
 yarn add -D semantic-release @scrumsdotcom/semantic-release-config
+```
 
 # Using npm
+
+```bash
 npm install --save-dev semantic-release @scrumsdotcom/semantic-release-config
+```
 
 # Using pnpm
+
+```bash
 pnpm add -D semantic-release @scrumsdotcom/semantic-release-config
+```
 
 # Using Bun
+
+```bash
 bun add -d semantic-release @scrumsdotcom/semantic-release-config
 ```
 
